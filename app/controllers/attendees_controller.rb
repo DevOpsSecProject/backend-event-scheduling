@@ -1,7 +1,7 @@
 class AttendeesController < ApplicationController
   before_action :set_event
   before_action :set_attendee, only: [:update, :destroy, :rsvp]
-
+  # testing commit
   # GET /events/:event_id/attendees
   def index
     @attendees = @event.attendees
