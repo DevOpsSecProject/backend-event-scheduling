@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  resources :events do
-    resources :comments, only: [:index, :create, :update, :destroy]
-    resources :tickets, only: [:index, :create]
+  # Routes for Events (CRUD)
+  resources :events, only: [:index, :create, :update, :destroy] do
+    # Nested routes for Attendees (CRUD)
+    resources :attendees, only: [:index, :create, :update, :destroy]
   end
 
-  resources :favourites, only: [:create, :destroy]
+  # RSVP functionality (custom route for attendees)
+  resources :attendees do
+    member do
+      post :rsvp
+    end
+  end
 end
