@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
     resources :comments, only: [:index, :create, :update, :destroy]
     resources :tickets, only: [:index, :create, :update, :destroy]
+
+    member do
+      post :generate_tickets
+    end
   end
 
   # RSVP functionality (custom route for attendees)
