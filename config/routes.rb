@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   end
 
   resources :favourites, only: [:create, :destroy]
-  resources :tickets, only: [:update]
+  resources :tickets, only: [:update, :destroy]
 end
