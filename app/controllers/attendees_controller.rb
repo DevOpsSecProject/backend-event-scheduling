@@ -10,12 +10,20 @@ class AttendeesController < ApplicationController
 
   # POST /events/:event_id/attendees
   def create
-    @attendee = @event.attendees.new(attendee_params)
-    if @attendee.save
-      render json: @attendee, status: :created
+    existing_attendee = @event.attendees.find_by(email: attendee_params[:email])
+    if existing_attendee
+      render json: existing_attendee, status: :ok
     else
-      render json: @attendee.errors, status: :unprocessable_entity
+      @attendee = @event.attendees.new(attendee_params)
+
+      if @attendee.save
+        render json: @attendee, status: :created
+      else
+        Rails.logger.error("Attendee validation errors: #{@attendee.errors.full_messages}")
+        render json: {errors: @attendee.errors.full_messages}, status: :unprocessable_entity
+      end
     end
+
   end
 
   # PATCH/PUT /events/:event_id/attendees/:id
@@ -53,6 +61,6 @@ class AttendeesController < ApplicationController
   end
 
   def attendee_params
-    params.require(:attendee).permit(:name, :email, :rsvp)
+    params.require(:attendee).permit(:name, :email, :rsvp, :event_id)
   end
 end

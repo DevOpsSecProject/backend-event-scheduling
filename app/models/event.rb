@@ -1,5 +1,7 @@
 class Event < ApplicationRecord
   has_many :comments, dependent: :destroy
-  has_many :favourties, dependent: :destroy
-  has_many :tickets, through: :favourties
+  has_many :favourites, dependent: :destroy
+  has_many :tickets, dependent: :destroy
+  has_many :attendees
+
 end

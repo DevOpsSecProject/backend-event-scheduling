@@ -51,3 +51,1744 @@ FOREIGN KEY ("event_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250222202731') RETURNING "version" /*application='EventManagerApi'*/[0m
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Started GET "/events" for ::1 at 2025-03-04 19:26:46 +0000
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='EventManagerApi'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 6 pending migrations:
+
+db/migrate/20250222164214_create_events.rb
+db/migrate/20250222202555_create_comments.rb
+db/migrate/20250222202630_create_favourites.rb
+db/migrate/20250222202731_create_tickets.rb
+db/migrate/20250222203307_create_users.rb
+db/migrate/20250228030706_create_attendees.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.10) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/events" for ::1 at 2025-03-04 19:26:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 6 pending migrations:
+
+db/migrate/20250222164214_create_events.rb
+db/migrate/20250222202555_create_comments.rb
+db/migrate/20250222202630_create_favourites.rb
+db/migrate/20250222202731_create_tickets.rb
+db/migrate/20250222203307_create_users.rb
+db/migrate/20250228030706_create_attendees.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.10) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/events" for ::1 at 2025-03-04 20:17:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 6 pending migrations:
+
+db/migrate/20250222164214_create_events.rb
+db/migrate/20250222202555_create_comments.rb
+db/migrate/20250222202630_create_favourites.rb
+db/migrate/20250222202731_create_tickets.rb
+db/migrate/20250222203307_create_users.rb
+db/migrate/20250228030706_create_attendees.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.10) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/events" for ::1 at 2025-03-04 20:17:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 6 pending migrations:
+
+db/migrate/20250222164214_create_events.rb
+db/migrate/20250222202555_create_comments.rb
+db/migrate/20250222202630_create_favourites.rb
+db/migrate/20250222202731_create_tickets.rb
+db/migrate/20250222203307_create_users.rb
+db/migrate/20250228030706_create_attendees.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.10) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-03-04 20:19:03.277850', '2025-03-04 20:19:03.277853') RETURNING "key" /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Migrating to CreateEvents (20250222164214)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "date" datetime(6), "location" varchar, "recurrence" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250222164214') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+Migrating to CreateComments (20250222202555)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_c6b77e33aa"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+) /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id") /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_event_id" ON "comments" ("event_id") /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250222202555') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+Migrating to CreateFavourites (20250222202630)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "favourites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3073f88368"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_209d126c47"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+) /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_favourites_on_user_id" ON "favourites" ("user_id") /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_favourites_on_event_id" ON "favourites" ("event_id") /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250222202630') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+Migrating to CreateTickets (20250222202731)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "price" decimal, "seat_number" varchar, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_538a036fb9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_4def87ea62"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+) /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_user_id" ON "tickets" ("user_id") /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_event_id" ON "tickets" ("event_id") /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250222202731') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+Migrating to CreateUsers (20250222203307)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250222203307') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+Migrating to CreateAttendees (20250228030706)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "attendees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "rsvp" boolean, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_4037bda9d5"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+) /*application='EventManagerApi'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_attendees_on_event_id" ON "attendees" ("event_id") /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250228030706') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Started GET "/events" for ::1 at 2025-03-04 20:19:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 90ms (Views: 2.0ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:19:33 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-04 20:23:43 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"R", "description"=>"rrr", "date"=>"2025-03-12T20:23", "recurrence"=>"daily", "event"=>{"title"=>"R", "description"=>"rrr", "date"=>"2025-03-12T20:23", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (2.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('R', 'rrr', '2025-03-12 20:23:00', NULL, 'daily', '2025-03-04 20:23:43.898803', '2025-03-04 20:23:43.898803') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 42ms (Views: 2.0ms | ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:23:44 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:23:44 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/1/attendees" for ::1 at 2025-03-04 20:23:51 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:48:in `set_event'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attendees' for an instance of Event):
+  
+app/controllers/attendees_controller.rb:7:in `index'
+Started GET "/events/1/attendees" for ::1 at 2025-03-04 20:23:52 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:48:in `set_event'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attendees' for an instance of Event):
+  
+app/controllers/attendees_controller.rb:7:in `index'
+Started GET "/events" for ::1 at 2025-03-04 20:28:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 62ms (Views: 8.1ms | ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:28:10 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-04 20:28:21 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"rr", "description"=>"rrr", "date"=>"2025-03-06T20:28", "recurrence"=>"daily", "event"=>{"title"=>"rr", "description"=>"rrr", "date"=>"2025-03-06T20:28", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (2.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('rr', 'rrr', '2025-03-06 20:28:00', NULL, 'daily', '2025-03-04 20:28:21.976586', '2025-03-04 20:28:21.976586') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 1.4ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:28:22 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:28:22 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/1/attendees" for ::1 at 2025-03-04 20:28:24 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:48:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 17.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/1/attendees" for ::1 at 2025-03-04 20:28:24 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:48:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 20:28:50 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"s", "email"=>"[FILTERED]", "event_id"=>1, "rsvp"=>true, "attendee"=>{"name"=>"s", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>1}}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:48:in `set_event'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x000001d04581e388>, params: {"name"=>"s", "email"=>"[FILTERED]", "event_id"=>1, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"s", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:14:in `create'
+  [1m[36mAttendee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:14:in `create'
+Completed 422 Unprocessable Content in 34ms (Views: 5.8ms | ActiveRecord: 3.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:36:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 8.8ms | ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:36:14 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/2/attendees" for ::1 at 2025-03-04 20:36:26 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 2 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 2 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 14.3ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/events/2/attendees" for ::1 at 2025-03-04 20:36:26 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 2 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 2 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 20:36:36 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>2, "rsvp"=>true, "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>2}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 2 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x0000022c84ef4e28>, params: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>2, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>2}} }[0m
+  [1m[36mAttendee Load (0.3ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 2 AND "attendees"."email" = 'sean@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x0000022c84ef4e28>, params: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>2, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+  [1m[36mAttendee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'sean@email.com' AND "attendees"."event_id" = 2 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+Completed 422 Unprocessable Content in 53ms (Views: 5.5ms | ActiveRecord: 8.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:46:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 9.2ms | ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:46:10 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/events/2" for ::1 at 2025-03-04 20:46:15 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"title"=>"rrrr", "description"=>"rrr", "date"=>"2025-03-06T20:28:00.000Z", "id"=>"2", "event"=>{"title"=>"rrrr", "description"=>"rrr", "date"=>"2025-03-06T20:28:00.000Z"}}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 2 LIMIT 1 /*action='update',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:29:in `update'
+  [1m[36mEvent Update (3.4ms)[0m  [1m[33mUPDATE "events" SET "title" = 'rrrr', "updated_at" = '2025-03-04 20:46:15.791948' WHERE "events"."id" = 2 /*action='update',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:29:in `update'
+Completed 200 OK in 94ms (Views: 1.7ms | ActiveRecord: 5.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/undefined/attendees" for ::1 at 2025-03-04 20:46:18 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"undefined"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = NULL LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/attendees_controller.rb:54:in `set_event'
+Started GET "/events/undefined/attendees" for ::1 at 2025-03-04 20:46:18 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"undefined"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = NULL LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/attendees_controller.rb:54:in `set_event'
+Started PUT "/events/undefined" for ::1 at 2025-03-04 20:46:43 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"title"=>"sss", "description"=>"sss", "date"=>"2025-03-06T20:46", "id"=>"undefined", "event"=>{"title"=>"sss", "description"=>"sss", "date"=>"2025-03-06T20:46"}}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = NULL LIMIT 1 /*action='update',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started PUT "/events/undefined" for ::1 at 2025-03-04 20:46:46 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"title"=>"sss", "description"=>"sss", "date"=>"2025-03-06T20:46", "id"=>"undefined", "event"=>{"title"=>"sss", "description"=>"sss", "date"=>"2025-03-06T20:46"}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = NULL LIMIT 1 /*action='update',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started DELETE "/events/1" for ::1 at 2025-03-04 20:46:54 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 3.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (Missing model class Favourty for the Event#favourties association. You can specify a different model class with the :class_name option.)
+Caused by: NameError (uninitialized constant Event::Favourty)
+
+Information for: NameError (Missing model class Favourty for the Event#favourties association. You can specify a different model class with the :class_name option.):
+  
+app/controllers/events_controller.rb:38:in `destroy'
+
+Information for cause: NameError (uninitialized constant Event::Favourty):
+  
+app/controllers/events_controller.rb:38:in `destroy'
+Started DELETE "/events/1" for ::1 at 2025-03-04 20:49:09 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.5ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 204 No Content in 37ms (ActiveRecord: 6.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/undefined" for ::1 at 2025-03-04 20:49:10 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = NULL LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started GET "/events" for ::1 at 2025-03-04 20:49:16 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:49:16 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/2" for ::1 at 2025-03-04 20:49:18 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 2 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (2.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 2 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 2 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.1ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 2 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 2.6ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-04 20:49:27 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"sss", "description"=>"sss", "date"=>"2025-03-21T20:49", "recurrence"=>"daily", "event"=>{"title"=>"sss", "description"=>"sss", "date"=>"2025-03-21T20:49", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (1.6ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('sss', 'sss', '2025-03-21 20:49:00', NULL, 'daily', '2025-03-04 20:49:27.771216', '2025-03-04 20:49:27.771216') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:49:27 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:49:27 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/3" for ::1 at 2025-03-04 20:49:31 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 3 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 3 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 3 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.1ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 3 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 2.3ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-04 20:49:41 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"sss", "description"=>"sss", "date"=>"2025-03-11T20:49", "recurrence"=>"daily", "event"=>{"title"=>"sss", "description"=>"sss", "date"=>"2025-03-11T20:49", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (2.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('sss', 'sss', '2025-03-11 20:49:00', NULL, 'daily', '2025-03-04 20:49:42.038842', '2025-03-04 20:49:42.038842') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 9ms (Views: 1.6ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:49:42 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 20:49:42 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 20:49:43 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 20:49:44 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 20:49:50 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sss", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "attendee"=>{"name"=>"sss", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:54:in `set_event'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x000001ad315cb7c0>, params: {"name"=>"sss", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"sss", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}} }[0m
+  [1m[36mAttendee Load (0.3ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 AND "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x000001ad315cb7c0>, params: {"name"=>"sss", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"sss", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+  [1m[36mAttendee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'FR@email.com' AND "attendees"."event_id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+Completed 422 Unprocessable Content in 23ms (Views: 0.5ms | ActiveRecord: 3.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:02:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 7.7ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:02:09 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:02:16 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:02:16 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.2ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 2.1ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 21:02:26 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x000001ba7bcafd28>, params: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}} }[0m
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 AND "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+[31mUnpermitted parameter: :event_id. Context: { controller: AttendeesController, action: create, request: #<ActionDispatch::Request:0x000001ba7bcafd28>, params: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "controller"=>"attendees", "action"=>"create", "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}} }[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for an instance of Attendee):
+  
+app/controllers/attendees_controller.rb:18:in `create'
+Started GET "/events" for ::1 at 2025-03-04 21:06:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 7.1ms | ActiveRecord: 2.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:07:00 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:07:03 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:57:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 6.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:07:03 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:57:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 21:07:09 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"ss", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "attendee"=>{"name"=>"ss", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:57:in `set_event'
+  [1m[36mAttendee Load (0.2ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 AND "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+Completed 404 Not Found in 27ms (ActiveRecord: 2.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/attendees_controller.rb:18:in `create'
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Migrating to AddUserIdAttendees (20250304211826)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250304211826') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+Migrating to AddFieldsToUsers (20250304211934)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar /*application='EventManagerApi'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar /*application='EventManagerApi'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250304211934') RETURNING "version" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Started GET "/events" for ::1 at 2025-03-04 21:20:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 62ms (Views: 7.1ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:20:44 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:20:52 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:57:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 8.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:20:53 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:57:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 21:21:03 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:57:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 AND "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:18:in `create'
+Completed 404 Not Found in 103ms (ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/attendees_controller.rb:18:in `create'
+Started GET "/events" for ::1 at 2025-03-04 21:23:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 9.7ms | ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:23:46 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:23:48 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:23:48 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-04 21:23:56 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>4, "rsvp"=>true, "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>4}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 AND "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'FR@email.com' AND "attendees"."event_id" = 4 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Create (1.3ms)[0m  [1m[32mINSERT INTO "attendees" ("name", "email", "rsvp", "event_id", "created_at", "updated_at") VALUES ('sean', 'FR@email.com', 1, 4, '2025-03-04 21:23:56.114146', '2025-03-04 21:23:56.114146') RETURNING "id" /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+Completed 201 Created in 26ms (Views: 0.7ms | ActiveRecord: 5.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:23:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-04 21:23:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:24:03 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-04 21:24:03 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/4/attendees/1" for ::1 at 2025-03-04 21:28:07 +0000
+Processing by AttendeesController#destroy as HTML
+  Parameters: {"event_id"=>"4", "id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 AND "attendees"."id" = 1 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:60:in `set_attendee'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:40:in `destroy'
+  [1m[36mAttendee Destroy (2.8ms)[0m  [1m[31mDELETE FROM "attendees" WHERE "attendees"."id" = 1 /*action='destroy',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:40:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 3.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 08:51:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 9.7ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 08:51:45 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 08:55:13 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 08:55:13 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-05 08:56:51 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"sss", "description"=>"ss", "date"=>"2025-03-05T08:56", "recurrence"=>"daily", "event"=>{"title"=>"sss", "description"=>"ss", "date"=>"2025-03-05T08:56", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (6.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('sss', 'ss', '2025-03-05 08:56:00', NULL, 'daily', '2025-03-05 08:56:51.511512', '2025-03-05 08:56:51.511512') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 26ms (Views: 1.5ms | ActiveRecord: 8.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 08:56:52 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 08:56:52 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-05 08:56:54 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 9.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-05 08:56:55 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 08:56:56 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/events/4"):
+  
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 08:56:56 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/events/4"):
+  
+Started GET "/events" for ::1 at 2025-03-05 09:02:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 8.2ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:02:01 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-05 09:02:04 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.3ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 10.0ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/attendees" for ::1 at 2025-03-05 09:02:05 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 2.2ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 09:02:09 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 09:02:09 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/comments" for 127.0.0.1 at 2025-03-05 09:02:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/events/4/comments"):
+  
+Started GET "/events/4/comments" for 127.0.0.1 at 2025-03-05 09:02:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/events/4/comments"):
+  
+Started GET "/events/5/attendees" for ::1 at 2025-03-05 09:07:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 5 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 5 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 7.5ms | ActiveRecord: 4.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 09:07:39 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 09:07:39 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4/comments" for 127.0.0.1 at 2025-03-05 09:07:40 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for an instance of Event):
+  
+app/controllers/comments_controller.rb:6:in `index'
+Started GET "/events/4/comments" for 127.0.0.1 at 2025-03-05 09:07:40 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for an instance of Event):
+  
+app/controllers/comments_controller.rb:6:in `index'
+Started GET "/events/4/attendees" for ::1 at 2025-03-05 09:08:36 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 4 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 2.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:09:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 9.9ms | ActiveRecord: 2.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:09:23 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/4" for ::1 at 2025-03-05 09:09:31 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 4 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 4 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 4 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.6ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 4 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 204 No Content in 190ms (ActiveRecord: 14.0ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/5" for ::1 at 2025-03-05 09:09:33 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 5 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 5 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 5 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 5 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.1ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 5 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 204 No Content in 16ms (ActiveRecord: 2.9ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-05 09:09:43 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"sss", "description"=>"sss", "date"=>"2025-03-07T09:09", "recurrence"=>"daily", "event"=>{"title"=>"sss", "description"=>"sss", "date"=>"2025-03-07T09:09", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (3.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('sss', 'sss', '2025-03-07 09:09:00', NULL, 'daily', '2025-03-05 09:09:43.306659', '2025-03-05 09:09:43.306659') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 11ms (Views: 1.5ms | ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:09:43 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:09:43 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/6/attendees" for ::1 at 2025-03-05 09:09:45 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 6 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 6 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/6/attendees" for ::1 at 2025-03-05 09:09:45 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 6 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 6 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 09:09:47 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=4):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started GET "/events/4" for 127.0.0.1 at 2025-03-05 09:09:47 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 4 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=4):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mEvent Load (4.9ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for pp */ LIMIT 11 /*application='EventManagerApi'*/[0m
+Started GET "/events" for ::1 at 2025-03-05 09:19:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 7.7ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:19:55 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/6/attendees" for ::1 at 2025-03-05 09:19:57 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 6 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 6 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 8.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/6/attendees" for ::1 at 2025-03-05 09:19:57 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 6 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 6 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2025-03-05 09:19:58 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=1):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started GET "/events/1" for 127.0.0.1 at 2025-03-05 09:19:59 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=1):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started DELETE "/events/6" for ::1 at 2025-03-05 09:20:16 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 6 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 6 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 6 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 6 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.1ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 6 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 204 No Content in 108ms (ActiveRecord: 5.4ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-05 09:20:26 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"sss", "description"=>"sss", "date"=>"2025-03-22T09:20", "recurrence"=>"daily", "event"=>{"title"=>"sss", "description"=>"sss", "date"=>"2025-03-22T09:20", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (2.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('sss', 'sss', '2025-03-22 09:20:00', NULL, 'daily', '2025-03-05 09:20:26.873943', '2025-03-05 09:20:26.873943') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 1.8ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:20:27 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:20:27 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2025-03-05 09:20:45 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"title"=>"sss", "description"=>"sssss", "date"=>"2025-03-20T09:20", "recurrence"=>"daily", "event"=>{"title"=>"sss", "description"=>"sssss", "date"=>"2025-03-20T09:20", "recurrence"=>"daily"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (2.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "date", "location", "recurrence", "created_at", "updated_at") VALUES ('sss', 'sssss', '2025-03-20 09:20:00', NULL, 'daily', '2025-03-05 09:20:45.257846', '2025-03-05 09:20:45.257846') RETURNING "id" /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 1.5ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:20:45 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:20:45 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/attendees" for ::1 at 2025-03-05 09:20:59 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/attendees" for ::1 at 2025-03-05 09:20:59 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2025-03-05 09:21:00 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=1):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+Started GET "/events/1" for 127.0.0.1 at 2025-03-05 09:21:00 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 1 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=1):
+  
+app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mEvent Load (3.9ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for pp */ LIMIT 11 /*application='EventManagerApi'*/[0m
+Started GET "/events" for ::1 at 2025-03-05 09:24:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 11.0ms | ActiveRecord: 3.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:24:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/attendees" for ::1 at 2025-03-05 09:24:08 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 8.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/attendees" for ::1 at 2025-03-05 09:24:08 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2025-03-05 09:24:09 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2025-03-05 09:24:09 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/comments" for 127.0.0.1 at 2025-03-05 09:24:09 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 8 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/comments" for 127.0.0.1 at 2025-03-05 09:24:10 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:24:10 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 8 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/favourites"):
+  
+Started GET "/events/8/tickets" for 127.0.0.1 at 2025-03-05 09:24:10 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:24:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/favourites"):
+  
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/tickets" for 127.0.0.1 at 2025-03-05 09:24:11 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:27:33 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:27:33 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:27:45 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:27:45 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 09:27:47 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 09:27:47 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 09:27:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:27:48 +0000
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 09:27:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:27:49 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:27:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/favourites"):
+  
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:27:49 +0000
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 09:27:49 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/favourites"):
+  
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 09:27:50 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:28:01 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"ssss", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: comment):
+  
+app/controllers/comments_controller.rb:54:in `comment_params'
+app/controllers/comments_controller.rb:18:in `create'

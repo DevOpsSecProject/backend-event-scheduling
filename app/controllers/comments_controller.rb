@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
+  before_action :set_event, only: [:index, :create]
   before_action :set_comment, only: %i[ show update destroy ]
-
   # GET /comments
   def index
-    @comments = Comment.all
+    @comments = @event.comments
 
     render json: @comments
   end
@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @event.comments.new(comment_params)
 
     if @comment.save
       render json: @comment, status: :created, location: @comment
@@ -36,9 +36,14 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   def destroy
     @comment.destroy!
+    head :no_content
   end
 
   private
+
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params.expect(:id))
@@ -46,6 +51,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.expect(comment: [ :content, :user_id, :event_id ])
+      params.require(:comment).permit(:content, :user_id, :event_id)
     end
 end
