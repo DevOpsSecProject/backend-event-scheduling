@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[ show update destroy ]
+  before_action :set_event, only: %i[ show update destroy generate_tickets ]
 
   # GET /events
   def index
@@ -36,6 +36,35 @@ class EventsController < ApplicationController
   # DELETE /events/1
   def destroy
     @event.destroy!
+  end
+
+  def generate_tickets
+
+    count = params[:count].presence || 10
+    base_price = params[:base_price].presence || 25.00
+
+    generated_count = 0
+
+    count.to_i.times do |i|
+      seat_row = (65 + (i / 10)).chr
+      seat_number = "#{seat_row}#{(i % 10) +1}"
+
+      row_premium = (seat_row.ord - 65) * 5.00
+      ticket_price = base_price.to_f + row_premium
+
+      ticket = @event.tickets.create(
+        price: ticket_price,
+        seat_number: seat_number,
+      )
+
+      generated_count += 1 if ticket.persisted?
+    end
+
+    render json: {
+      success: true,
+      message: "#{generated_count} tickets generated successfully ",
+      ticket_count: @event.tickets.count
+    }
   end
 
   private

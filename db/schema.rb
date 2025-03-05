@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_04_211934) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_05_121805) do
   create_table "attendees", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -53,7 +53,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_04_211934) do
   create_table "tickets", force: :cascade do |t|
     t.decimal "price"
     t.string "seat_number"
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.integer "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
