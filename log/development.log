@@ -4367,3 +4367,545 @@ Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 
 ActiveRecord::RecordNotFound (Couldn't find Attendee with 'id'=2 [WHERE "attendees"."event_id" = ?]):
   
 app/controllers/attendees_controller.rb:60:in `set_attendee'
+Started GET "/events" for ::1 at 2025-03-05 15:38:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 7.8ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 15:38:48 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 15:38:57 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.2ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 63ms (Views: 27.9ms | ActiveRecord: 2.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 15:38:57 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.2ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:38:58 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:38:58 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:38:58 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:38:59 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 15:38:59 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 15:38:59 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 15:38:59 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:45:in `set_event'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 7 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 15:38:59 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:45:in `set_event'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 7 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/7/comments/1" for 127.0.0.1 at 2025-03-05 15:39:03 +0000
+Processing by CommentsController#destroy as HTML
+  Parameters: {"event_id"=>"7", "id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 1 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:49:in `set_comment'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:38:in `destroy'
+  [1m[36mComment Destroy (3.9ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = 1 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:38:in `destroy'
+Completed 204 No Content in 14ms (ActiveRecord: 6.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/7/comments/1" for 127.0.0.1 at 2025-03-05 15:39:03 +0000
+Processing by CommentsController#destroy as HTML
+  Parameters: {"event_id"=>"7", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 1 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:49:in `set_comment'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment with 'id'=1):
+  
+app/controllers/comments_controller.rb:49:in `set_comment'
+Started GET "/events" for ::1 at 2025-03-05 15:45:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 10.1ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 15:45:33 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 15:45:35 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 36.7ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 15:45:35 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:45:36 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:45:36 +0000
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:45:36 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/seanr/Documents/NCI/Computing/Year 4/DevOpsSec/CA1/backend-event-scheduling/app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:45:37 +0000
+  
+SyntaxError (C:/Users/seanr/Documents/NCI/Computing/Year 4/DevOpsSec/CA1/backend-event-scheduling/app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:45:42 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:45:42 +0000
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:45:42 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/seanr/Documents/NCI/Computing/Year 4/DevOpsSec/CA1/backend-event-scheduling/app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:45:42 +0000
+  
+SyntaxError (C:/Users/seanr/Documents/NCI/Computing/Year 4/DevOpsSec/CA1/backend-event-scheduling/app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/comments_controller.rb:60: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/events" for ::1 at 2025-03-05 15:47:31 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 15:47:31 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 15:47:33 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 15:47:33 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:47:34 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 15:47:34 +0000
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:47:34 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:73:in `set_event'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:50:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:47:34 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 15:47:34 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:50:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mFavourite Load (0.2ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 15:47:35 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 15:47:35 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:45:in `set_event'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 7 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 15:47:35 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:45:in `set_event'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 7 /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/7/comments/3" for 127.0.0.1 at 2025-03-05 15:47:38 +0000
+Processing by CommentsController#destroy as HTML
+  Parameters: {"event_id"=>"7", "id"=>"3"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 3 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+  [1m[36mComment Destroy (2.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = 3 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 4.6ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:47:42 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"sss", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:50:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mComment Create (3.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "event_id", "created_at", "updated_at") VALUES ('sss', 1, 7, '2025-03-05 15:47:42.794924', '2025-03-05 15:47:42.794924') RETURNING "id" /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 0.9ms | ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/events/7/comments.4" for 127.0.0.1 at 2025-03-05 15:47:47 +0000
+  
+ActionController::RoutingError (No route matches [PATCH] "/events/7/comments.4"):
+  
+Started DELETE "/events/7/comments/4" for 127.0.0.1 at 2025-03-05 15:47:51 +0000
+Processing by CommentsController#destroy as HTML
+  Parameters: {"event_id"=>"7", "id"=>"4"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 4 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 4 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+  [1m[36mComment Destroy (2.0ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = 4 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 2.4ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 15:47:54 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"sss", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:50:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mComment Create (2.0ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "event_id", "created_at", "updated_at") VALUES ('sss', 1, 7, '2025-03-05 15:47:54.404824', '2025-03-05 15:47:54.404824') RETURNING "id" /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 1.0ms | ActiveRecord: 2.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/events/7/comments.5" for 127.0.0.1 at 2025-03-05 15:47:59 +0000
+  
+ActionController::RoutingError (No route matches [PATCH] "/events/7/comments.5"):
+  
+Started PATCH "/events/7/comments/5" for 127.0.0.1 at 2025-03-05 15:49:12 +0000
+Processing by CommentsController#update as HTML
+  Parameters: {"comment"=>{"content"=>"sss"}, "event_id"=>"7", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 5 LIMIT 1 /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/events/7/comments/5" for 127.0.0.1 at 2025-03-05 15:49:16 +0000
+Processing by CommentsController#update as HTML
+  Parameters: {"comment"=>{"content"=>"sssss"}, "event_id"=>"7", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 5 LIMIT 1 /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `update'
+  [1m[36mComment Update (5.4ms)[0m  [1m[33mUPDATE "comments" SET "content" = 'sssss', "updated_at" = '2025-03-05 15:49:16.175791' WHERE "comments"."id" = 5 /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `update'
+Completed 200 OK in 14ms (Views: 1.2ms | ActiveRecord: 5.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/events/7/comments/5" for 127.0.0.1 at 2025-03-05 15:49:16 +0000
+Processing by CommentsController#update as HTML
+  Parameters: {"comment"=>{"content"=>"sssss"}, "event_id"=>"7", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 5 LIMIT 1 /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/events/7/comments/5" for 127.0.0.1 at 2025-03-05 15:49:19 +0000
+Processing by CommentsController#update as HTML
+  Parameters: {"comment"=>{"content"=>"sssssss"}, "event_id"=>"7", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 5 LIMIT 1 /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `update'
+  [1m[36mComment Update (2.3ms)[0m  [1m[33mUPDATE "comments" SET "content" = 'sssssss', "updated_at" = '2025-03-05 15:49:19.939186' WHERE "comments"."id" = 5 /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `update'
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 2.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/7/comments/5" for 127.0.0.1 at 2025-03-05 15:49:21 +0000
+Processing by CommentsController#destroy as HTML
+  Parameters: {"event_id"=>"7", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 5 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:54:in `set_comment'
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = 5 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+  [1m[36mComment Destroy (2.0ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = 5 /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:40:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 2.2ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started PATCH "/tickets/2" for 127.0.0.1 at 2025-03-05 15:49:28 +0000
+Processing by TicketsController#update as HTML
+  Parameters: {"ticket"=>{"price"=>"24.98", "seat_number"=>"A2"}, "id"=>"2"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = 2 LIMIT 1 /*action='update',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:48:in `set_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:29:in `update'
+  [1m[36mTicket Update (2.3ms)[0m  [1m[33mUPDATE "tickets" SET "price" = 24.98, "updated_at" = '2025-03-05 15:49:28.185862' WHERE "tickets"."id" = 2 /*action='update',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:29:in `update'
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 2.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/tickets/2" for 127.0.0.1 at 2025-03-05 15:49:29 +0000
+  
+ActionController::RoutingError (No route matches [DELETE] "/tickets/2"):
+  
+Started DELETE "/tickets/2" for 127.0.0.1 at 2025-03-05 15:51:32 +0000
+Processing by TicketsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = 2 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:48:in `set_ticket'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTicket Destroy (1.3ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = 2 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+Completed 204 No Content in 16ms (ActiveRecord: 5.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/tickets/3" for 127.0.0.1 at 2025-03-05 15:51:33 +0000
+Processing by TicketsController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = 3 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:48:in `set_ticket'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTicket Destroy (1.8ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = 3 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 2.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/tickets/4" for 127.0.0.1 at 2025-03-05 15:51:34 +0000
+Processing by TicketsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = 4 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:48:in `set_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTicket Destroy (1.8ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = 4 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/tickets/5" for 127.0.0.1 at 2025-03-05 15:51:36 +0000
+Processing by TicketsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = 5 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:48:in `set_ticket'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTicket Destroy (1.8ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = 5 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 2.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/tickets/6" for 127.0.0.1 at 2025-03-05 15:51:37 +0000
+Processing by TicketsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = 6 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:48:in `set_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTicket Destroy (1.7ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = 6 /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:38:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 2.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+

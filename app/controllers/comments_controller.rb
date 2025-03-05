@@ -35,8 +35,13 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
-    @comment.destroy!
-    head :no_content
+    begin
+      @comment = Comment.find(params[:id])
+      @comment.destroy!
+      head :no_content
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: 'Record Not Found!' }, status: :not_found
+    end
   end
 
   private
@@ -46,7 +51,7 @@ class CommentsController < ApplicationController
   end
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      @comment = Comment.find(params.expect(:id))
+      @comment = Comment.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
