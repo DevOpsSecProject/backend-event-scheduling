@@ -1792,3 +1792,675 @@ ActionController::ParameterMissing (param is missing or the value is empty or in
   
 app/controllers/comments_controller.rb:54:in `comment_params'
 app/controllers/comments_controller.rb:18:in `create'
+Started GET "/events" for ::1 at 2025-03-05 09:50:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 61ms (Views: 8.4ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:50:12 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:51:22 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:51:22 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 09:51:25 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 11.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 09:51:25 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 09:51:27 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 09:51:27 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:51:28 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:51:28 +0000
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:51:28 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.2ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:51:28 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 09:51:29 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 09:51:29 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:51:36 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"edsds", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 422 Unprocessable Content in 30ms (Views: 8.4ms | ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:52:58 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"edsds", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mComment Create (3.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "event_id", "created_at", "updated_at") VALUES ('edsds', 1, 7, '2025-03-05 09:52:58.740217', '2025-03-05 09:52:58.740217') RETURNING "id" /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed)
+Caused by: SQLite3::ConstraintException (FOREIGN KEY constraint failed)
+
+Information for: ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+
+Information for cause: SQLite3::ConstraintException (FOREIGN KEY constraint failed):
+  
+app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("id", "created_at", "updated_at", "name", "email") VALUES (1, '2025-03-05 09:54:24.425210', '2025-03-05 09:54:24.425210', NULL, NULL) RETURNING "id" /*application='EventManagerApi'*/[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='EventManagerApi'*/[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" /*application='EventManagerApi'*/[0m
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 09:58:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='EventManagerApi'*/[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"edsds", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mComment Create (2.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "event_id", "created_at", "updated_at") VALUES ('edsds', 1, 7, '2025-03-05 09:58:14.525400', '2025-03-05 09:58:14.525400') RETURNING "id" /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 8.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comment_url' for an instance of CommentsController):
+  
+app/controllers/comments_controller.rb:21:in `create'
+Started POST "/favourites" for 127.0.0.1 at 2025-03-05 09:58:26 +0000
+Started POST "/favourites" for 127.0.0.1 at 2025-03-05 09:58:26 +0000
+Processing by FavouritesController#create as HTML
+  Parameters: {"favourite"=>{"user_id"=>1, "event_id"=>7}}
+Processing by FavouritesController#create as HTML
+  Parameters: {"favourite"=>{"user_id"=>1, "event_id"=>7}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mFavourite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favourites" WHERE "favourites"."user_id" = 1 AND "favourites"."event_id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mFavourite Create (0.2ms)[0m  [1m[32mINSERT INTO "favourites" ("user_id", "event_id", "created_at", "updated_at") VALUES (1, 7, '2025-03-05 09:58:26.221288', '2025-03-05 09:58:26.221288') RETURNING "id" /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+Completed 201 Created in 29ms (Views: 1.3ms | ActiveRecord: 4.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (26.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mFavourite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favourites" WHERE "favourites"."user_id" = 1 AND "favourites"."event_id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:20:in `create'
+Completed 422 Unprocessable Content in 45ms (Views: 0.8ms | ActiveRecord: 56.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-05 09:58:41 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sean", "email"=>"[FILTERED]", "event_id"=>7, "rsvp"=>true, "attendee"=>{"name"=>"sean", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>7}}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 AND "attendees"."email" = 'FR@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'FR@email.com' AND "attendees"."event_id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Create (0.2ms)[0m  [1m[32mINSERT INTO "attendees" ("name", "email", "rsvp", "event_id", "created_at", "updated_at") VALUES ('sean', 'FR@email.com', 1, 7, '2025-03-05 09:58:41.700307', '2025-03-05 09:58:41.700307') RETURNING "id" /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+Completed 201 Created in 17ms (Views: 0.5ms | ActiveRecord: 3.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:58:41 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:58:41 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/attendees" for ::1 at 2025-03-05 09:58:54 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.2ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/attendees" for ::1 at 2025-03-05 09:58:54 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2025-03-05 09:58:57 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/comments" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Started GET "/events/8" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 8 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/comments" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Started GET "/events/8/tickets" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 8 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/8/tickets" for 127.0.0.1 at 2025-03-05 09:58:58 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"8"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events/8/comments" for 127.0.0.1 at 2025-03-05 09:59:17 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"ssss", "user_id"=>1, "event_id"=>8}, "event_id"=>"8"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mComment Create (3.0ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "event_id", "created_at", "updated_at") VALUES ('ssss', 1, 8, '2025-03-05 09:59:17.487680', '2025-03-05 09:59:17.487680') RETURNING "id" /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 4.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comment_url' for an instance of CommentsController):
+  
+app/controllers/comments_controller.rb:21:in `create'
+Started POST "/attendees" for ::1 at 2025-03-05 09:59:35 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"sss", "email"=>"[FILTERED]", "event_id"=>8, "rsvp"=>true, "attendee"=>{"name"=>"sss", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>8}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 8 AND "attendees"."email" = 'sean@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'sean@email.com' AND "attendees"."event_id" = 8 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Create (0.2ms)[0m  [1m[32mINSERT INTO "attendees" ("name", "email", "rsvp", "event_id", "created_at", "updated_at") VALUES ('sss', 'sean@email.com', 1, 8, '2025-03-05 09:59:35.147151', '2025-03-05 09:59:35.147151') RETURNING "id" /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+Completed 201 Created in 18ms (Views: 1.2ms | ActiveRecord: 2.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:59:35 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 09:59:35 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/events/8" for ::1 at 2025-03-05 09:59:47 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 8 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Load (2.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 8 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mComment Destroy (1.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = 2 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."event_id" = 8 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."event_id" = 8 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mEvent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = 8 /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='destroy',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:38:in `destroy'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.5ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed)
+Caused by: SQLite3::ConstraintException (FOREIGN KEY constraint failed)
+
+Information for: ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+
+Information for cause: SQLite3::ConstraintException (FOREIGN KEY constraint failed):
+  
+app/controllers/events_controller.rb:38:in `destroy'
+Started GET "/events" for ::1 at 2025-03-05 10:05:21 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 6.4ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 10:05:21 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 10:05:29 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.3ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 10:05:29 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 10:05:31 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 10:05:31 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 10:05:31 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 10:05:32 +0000
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 10:05:32 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.2ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 10:05:32 +0000
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 10:05:32 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 10:05:33 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/events/7/comments" for 127.0.0.1 at 2025-03-05 10:05:38 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"content"=>"xzxz", "user_id"=>1, "event_id"=>7}, "event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mComment Create (2.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "event_id", "created_at", "updated_at") VALUES ('xzxz', 1, 7, '2025-03-05 10:05:38.403669', '2025-03-05 10:05:38.403669') RETURNING "id" /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 0.6ms | ActiveRecord: 4.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 10:05:45 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/favourites/1" for 127.0.0.1 at 2025-03-05 10:05:45 +0000
+Processing by FavouritesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" WHERE "favourites"."id" = 1 LIMIT 1 /*action='destroy',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:44:in `set_favourite'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:38:in `destroy'
+  [1m[36mFavourite Destroy (1.7ms)[0m  [1m[31mDELETE FROM "favourites" WHERE "favourites"."id" = 1 /*action='destroy',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:38:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 2.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/attendees" for ::1 at 2025-03-05 10:06:08 +0000
+Processing by AttendeesController#create as HTML
+  Parameters: {"name"=>"z\\z\\", "email"=>"[FILTERED]", "event_id"=>7, "rsvp"=>true, "attendee"=>{"name"=>"z\\z\\", "email"=>"[FILTERED]", "rsvp"=>true, "event_id"=>7}}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.1ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 AND "attendees"."email" = 'sean@email.com' LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "attendees" WHERE "attendees"."email" = 'sean@email.com' AND "attendees"."event_id" = 7 LIMIT 1 /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mAttendee Create (0.1ms)[0m  [1m[32mINSERT INTO "attendees" ("name", "email", "rsvp", "event_id", "created_at", "updated_at") VALUES ('z\z\', 'sean@email.com', 1, 7, '2025-03-05 10:06:08.272301', '2025-03-05 10:06:08.272301') RETURNING "id" /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:19:in `create'
+Completed 201 Created in 17ms (Views: 1.2ms | ActiveRecord: 2.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 10:06:08 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2025-03-05 10:06:08 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /*action='index',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 10:06:16 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.2ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/attendees" for ::1 at 2025-03-05 10:06:16 +0000
+Processing by AttendeesController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:56:in `set_event'
+  [1m[36mAttendee Load (0.3ms)[0m  [1m[34mSELECT "attendees".* FROM "attendees" WHERE "attendees"."event_id" = 7 /*action='index',application='EventManagerApi',controller='attendees'*/[0m
+  ↳ app/controllers/attendees_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 10:06:17 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2025-03-05 10:06:17 +0000
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 10:06:17 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='show',application='EventManagerApi',controller='events'*/[0m
+  ↳ app/controllers/events_controller.rb:44:in `set_event'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/comments" for 127.0.0.1 at 2025-03-05 10:06:17 +0000
+Processing by CommentsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = 7 LIMIT 1 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:45:in `set_event'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = 7 /*action='index',application='EventManagerApi',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 10:06:18 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.1ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/favourites" for 127.0.0.1 at 2025-03-05 10:06:18 +0000
+Processing by FavouritesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mFavourite Load (0.2ms)[0m  [1m[34mSELECT "favourites".* FROM "favourites" /*action='index',application='EventManagerApi',controller='favourites'*/[0m
+  ↳ app/controllers/favourites_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 10:06:18 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/events/7/tickets" for 127.0.0.1 at 2025-03-05 10:06:18 +0000
+Processing by TicketsController#index as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /*action='index',application='EventManagerApi',controller='tickets'*/[0m
+  ↳ app/controllers/tickets_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
